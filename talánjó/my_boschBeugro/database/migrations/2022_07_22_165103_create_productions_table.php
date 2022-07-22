@@ -13,10 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('productions', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-        });
+        if (Schema::hasTable('production')) {
+            
+        }else{
+
+            Schema::create('production', function (Blueprint $table) {
+                $table->id();
+                $table->timestamps();
+            });
+        }
     }
 
     /**

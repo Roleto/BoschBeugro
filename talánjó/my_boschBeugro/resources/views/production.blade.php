@@ -10,16 +10,21 @@
                 <th>Stat Date</th>
                 <th>End tDate</th>
             </tr>
-            <!-- @foreach ($productions as $production)
-                <th>{{[$production['id']]}}</th>
-                <th>{{[$production['pcb_id']]}}</th>
-                <th>{{[$production['quantity']]}}</th>
-                <th>{{[$production['startDate']]}}</th>
-                <th>{{[$production['endDate']]}}</th>
-                <th>Delete</th>
-                <th>Update</th>
-                
-            @endforeach -->
+            @if (count($productions) > 0)
+                 @foreach ($productions as $production)
+                 <tr>
+                     <th>{{$production['id']}}<th>
+                     <th>{{$production['pcb_id']}}<th>
+                     <th>{{$production['quantity']}}<th>
+                     <th>{{$production['startDate']}}<th>
+                     <th>{{$production['endDate']}}<th>
+                     <th>Delete</th>
+                     <th>Update</th>
+                    </tr>
+                @endforeach
+            @else
+                <h2>There is no guitar</h2>
+            @endif
         </table>
     </div>
 </div>

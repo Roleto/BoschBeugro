@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Production;
 
 class HomeController extends Controller
 {
@@ -40,7 +41,7 @@ class HomeController extends Controller
     {
         //views can be returned with data.
         return view('production', [
-            'productions' => self::getData()
-    ]);
+                'productions' => Production::all()
+        ]);
     }
 }
