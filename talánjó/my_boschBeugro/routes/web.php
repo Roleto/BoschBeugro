@@ -17,4 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/production', 'HomeController@production')->name('production');
+
+
+//Route::get('/production', 'HomeController@production')->name('production');
+
+//Auth::routes();
+
+Route::get('/production', [App\Http\Controllers\HomeController::class, 'production'])->name('production');
