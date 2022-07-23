@@ -39,8 +39,8 @@
                    <th>{{$production['quantity']}}<th>
                    <th>{{$production['startDate']}}<th>
                    <th>{{$production['endDate']}}<th>
-                   <th>Delete</th>
-                   <th>Update</th>
+                    <th><a href="{{ route('destroy', $production['id']) }}">Delete</a></th>
+                    <th>Update</th>
                 </tr>
                 @elseif($filter_data == $production['pcb_id'] )
                 <tr>
@@ -49,7 +49,7 @@
                     <th>{{$production['quantity']}}<th>
                     <th>{{$production['startDate']}}<th>
                     <th>{{$production['endDate']}}<th>
-                    <th>Delete</th>
+                    <th><a href="">Delete</a></th>
                     <th>Update</th>
                 </tr>
                 @endif

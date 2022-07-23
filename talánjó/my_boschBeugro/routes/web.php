@@ -24,3 +24,4 @@ Route::get('/', function () {
 //Auth::routes();
 
 Route::get('/production', [App\Http\Controllers\HomeController::class, 'production'])->name('production');
+Route::get('/destroy/{id}', [App\Http\Controllers\HomeController::class, 'destroy'])->name('destroy');
