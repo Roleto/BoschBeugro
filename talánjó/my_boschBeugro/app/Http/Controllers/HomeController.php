@@ -41,7 +41,8 @@ class HomeController extends Controller
     {
         //views can be returned with data.
         return view('production', [
-                'productions' => Production::all()
+                'productions' => Production::all(),
+                'filter_data' => 0
         ]);
     }
 }
