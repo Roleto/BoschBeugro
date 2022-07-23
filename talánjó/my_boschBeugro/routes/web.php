@@ -19,9 +19,12 @@ Route::get('/', function () {
 
 
 
-//Route::get('/production', 'HomeController@production')->name('production');
 
 //Auth::routes();
 
 Route::get('/production', [App\Http\Controllers\HomeController::class, 'production'])->name('production');
 Route::get('/destroy/{id}', [App\Http\Controllers\HomeController::class, 'destroy'])->name('destroy');
+Route::get('/center', [App\Http\Controllers\HomeController::class, 'center'])->name('center');
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

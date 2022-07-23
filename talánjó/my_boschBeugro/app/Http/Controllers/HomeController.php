@@ -40,4 +40,9 @@ class HomeController extends Controller
             'filter_data' => 0
         ]);
     }
+
+    public function center()
+    {
+        return view('center');
+    }
 }

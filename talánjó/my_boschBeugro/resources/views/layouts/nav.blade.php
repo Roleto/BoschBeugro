@@ -6,10 +6,11 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
       <a class="nav-item nav-link" href="{{ route('production') }}">Production</a>
+      <a class="nav-item nav-link" href="{{ route('center') }}">Center</a>
       <a class="nav-item nav-link" href="#">About</a>
     </div>
   </div>
   <span class="navbar-text">
-      Write your name here
+      Gulya Roland
     </span>
 </nav>

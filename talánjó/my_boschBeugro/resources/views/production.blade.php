@@ -28,7 +28,6 @@
                 <th>Stat Date</th>
                 <th>End Date</th>
                 <th>Delete</th>
-                <th>Update</th>
             </tr>
             @if (count($productions) > 0)
             @foreach ($productions as $production)
@@ -40,7 +39,6 @@
                    <th>{{$production['startDate']}}<th>
                    <th>{{$production['endDate']}}<th>
                     <th><a href="{{ route('destroy', $production['id']) }}">Delete</a></th>
-                    <th>Update</th>
                 </tr>
                 @elseif($filter_data == $production['pcb_id'] )
                 <tr>
@@ -50,7 +48,6 @@
                     <th>{{$production['startDate']}}<th>
                     <th>{{$production['endDate']}}<th>
                     <th><a href="">Delete</a></th>
-                    <th>Update</th>
                 </tr>
                 @endif
                 @endforeach
