@@ -2,7 +2,7 @@
 @section('content')
 <div class="container" style="margin-top: 10px">
     <div id="productions">
-        <form action="" method="get">
+    <form action="" method="get">
             <select name="Filter"  id="filter">
                 <option value="" disabled selected>Choose option</option>
                      @foreach ($productions as $production)
@@ -20,34 +20,36 @@
             }
         }
         ?>
-        <table>
-            <tr>
-                <th>Id</th>
-                <th>Pcb id</th>
-                <th>Quantity</th>
-                <th>Stat Date</th>
-                <th>End Date</th>
-                <th>Delete</th>
-            </tr>
+        <table class="table table-bordered text-lg-center">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Id</th>
+                    <th>Pcb id</th>
+                    <th>Quantity</th>
+                    <th>Stat Date</th>
+                    <th>End Date</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
             @if (count($productions) > 0)
             @foreach ($productions as $production)
             @if($filter_data == 0)
                 <tr>
-                   <th>{{$production['id']}}<th>
-                   <th>{{$production['pcb_id']}}<th>
-                   <th>{{$production['quantity']}}<th>
-                   <th>{{$production['startDate']}}<th>
-                   <th>{{$production['endDate']}}<th>
-                    <th><a href="{{ route('destroy', $production['id']) }}">Delete</a></th>
+                    <td>{{$production['id']}}</td>
+                    <td>{{$production['pcb_id']}}</td>
+                    <td>{{$production['quantity']}}</td>
+                    <td>{{$production['startDate']}}</td>
+                    <td>{{$production['endDate']}}</td>
+                    <td><a href="{{ route('destroy', $production['id']) }}">Delete</a></td>
                 </tr>
                 @elseif($filter_data == $production['pcb_id'] )
                 <tr>
-                    <th>{{$production['id']}}<th>
-                    <th>{{$production['pcb_id']}}<th>
-                    <th>{{$production['quantity']}}<th>
-                    <th>{{$production['startDate']}}<th>
-                    <th>{{$production['endDate']}}<th>
-                    <th><a href="">Delete</a></th>
+                    <td>{{$production['id']}}</td>
+                    <td>{{$production['pcb_id']}}</td>
+                    <td>{{$production['quantity']}}</td>
+                    <td>{{$production['startDate']}}</td>
+                    <td>{{$production['endDate']}}</td>
+                    <td><a href="">Delete</a></td>
                 </tr>
                 @endif
                 @endforeach
@@ -55,6 +57,4 @@
                 <h2>There is no data in the database</h2>
             @endif
         </table>
-    </div>
-</div>
 @endsection
