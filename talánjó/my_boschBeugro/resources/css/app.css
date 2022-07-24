@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Nunito);
 
 /*!
  * Bootstrap v4.6.1 (https://getbootstrap.com/)
@@ -712,6 +712,7 @@ pre code {
   padding-right: 15px;
   padding-left: 15px;
 }
+
 
 .col {
   flex-basis: 0;
@@ -3973,8 +3974,8 @@ input[type=button].btn-block {
   display: block;
   min-height: 1.44rem;
   padding-left: 1.5rem;
-  -webkit-print-color-adjust: exact;
-          color-adjust: exact;
+  /* -webkit-print-color-adjust: exact;
+          color-adjust: exact; */
 }
 
 .custom-control-inline {
@@ -4586,7 +4587,16 @@ input[type=button].btn-block {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
-
+.centerdiv {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+}
 .navbar-collapse {
   flex-basis: 100%;
   flex-grow: 1;
@@ -4990,7 +5000,7 @@ input[type=button].btn-block {
 }
 
 .card {
-  position: relative;
+  position: center;
   display: flex;
   flex-direction: column;
   min-width: 0;
@@ -4999,6 +5009,7 @@ input[type=button].btn-block {
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
+  align-items: center;
 }
 
 .card > hr {
@@ -5036,6 +5047,7 @@ input[type=button].btn-block {
 
 .card-title {
   margin-bottom: 0.75rem;
+
 }
 
 .card-subtitle {
