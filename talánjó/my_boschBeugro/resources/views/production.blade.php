@@ -9,7 +9,7 @@
                 <option value={{$production['pcb_id']}}>{{$production['pcb_id']}}</option>
                      @endforeach
             </select>
-            <input type="submit" name="submit" valaue="Filter"> 
+            <input type="submit" name="submit" value="Filter"> 
         </form>
         <?php
         if(isset($_GET['submit'])){
@@ -40,7 +40,7 @@
                     <td>{{$production['quantity']}}</td>
                     <td>{{$production['startDate']}}</td>
                     <td>{{$production['endDate']}}</td>
-                    <td><a href="{{ route('destroy', $production['id']) }}">Delete</a></td>
+                    <td><a href="{{ route('destroy', $production['id']) }}">X</a></td>
                 </tr>
                 @elseif($filter_data == $production['pcb_id'] )
                 <tr>
@@ -49,7 +49,7 @@
                     <td>{{$production['quantity']}}</td>
                     <td>{{$production['startDate']}}</td>
                     <td>{{$production['endDate']}}</td>
-                    <td><a href="">Delete</a></td>
+                    <td><a href="{{ route('destroy', $production['id']) }}">X</a></td>
                 </tr>
                 @endif
                 @endforeach

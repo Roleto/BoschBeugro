@@ -45,4 +45,9 @@ class HomeController extends Controller
     {
         return view('center');
     }
+
+    public function about()
+    {
+        return view('about');
+    }
 }
